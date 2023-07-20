@@ -40,11 +40,9 @@ h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: 0.8rem;}
 
-/*
-
-        Header
-
-*/
+/*--------------------------------------------------------------
+                        # Header
+--------------------------------------------------------------*/
 #header {
     position: sticky;
     top: 0px;
@@ -63,11 +61,9 @@ small, .text_small {font-size: 0.8rem;}
 }
 
 
-/*
-
-        Navbars
-
-*/
+/*--------------------------------------------------------------
+                        # Navbar
+--------------------------------------------------------------*/
 .navbar {
     display: flex;
     align-items: center;
@@ -109,10 +105,74 @@ small, .text_small {font-size: 0.8rem;}
 .navbar li a:hover:before {
     transform: scaleX(1);
 }
-
+/*--------------------------------------------------------------
+                        # Mobile Collapse
+--------------------------------------------------------------*/
+.mobile-collapse {
+    display: none;
+}
 @media only screen and (max-width: 425px){
-    /*Small smartphones [325px -> 425px]*/
+    .mobile-collapse {
+        display: block;
+    }
     .navbar {
         display: none;
+        position: fixed;
+        top: 70px; /* Adjust the top position to your liking */
+        max-width: 280px;
+        left: 50px;
+        right: 50px;
+        width: 100%;
+        background-color: var(--gray);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar.show-mobile-menu {
+        display: block;
+    }
+
+    .navbar.show-mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar.show-mobile-menu li {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar.show-mobile-menu li a {
+        font-size: 14px;
     }
 }
+
+
+/*--------------------------------------------------------------
+                        # Research Car
+--------------------------------------------------------------*/
+.modal .btn-modal-close {
+    background-color: var(--white);
+    border: 0px;
+}
+
+.modal .btn-modal-close .bi-x-lg {
+    font-size: 20px;
+}
+
+.modal .btn-modal-close .bi-x-lg:hover {
+    color: var(--red);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form .btn-primary {
+    background-color: var(--blue);
+}
+
+
