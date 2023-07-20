@@ -111,6 +111,7 @@ small, .text_small {font-size: 0.8rem;}
 .mobile-collapse {
     display: none;
 }
+
 @media only screen and (max-width: 425px){
     .mobile-collapse {
         display: block;
@@ -176,3 +177,53 @@ small, .text_small {font-size: 0.8rem;}
 }
 
 
+
+/*--------------------------------------------------------------
+                        # Hero
+--------------------------------------------------------------*/
+
+
+#hero {
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+}
+
+#hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero .container h1 {
+    color: var(--black);
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.275px;
+}
+
+#hero .container .ease {
+    color: var(--blue);
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.275px;
+}
+@media only screen and (max-width: 425px){
+    #hero .row .col-10 {
+        display: none;
+    }
+}
+
+
+#hero .container img {
+    width: 440px;
+    height: 600px;
+    border-radius: 50px;
+}
