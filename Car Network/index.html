@@ -21,58 +21,35 @@
 </head>
 <body>
     <header id="header">
-        <div class="container py-4 px-2 d-flex justify-content-sm-between align-items-center">
+        <div class="container py-4 px-2 d-flex justify-content-between align-items-center">
             <div class="navbar-brand">
-                <a href="" class="text-brand fw-bold">CAR<span class="text-black">NETWORK</span></a>
+                <a href=""><h5 class="fw-bold m-0">CAR<span class="text-black">NETWORK</span></h5></a>
             </div>
+
             <nav class="navbar">
                 <ul>
-                    <li><a href="" class="nav-link">Home</a></li>
-                    <li><a href="" class="nav-link">About</a></li>
-                    <li><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
                 </ul>
             </nav>
+
             <div class="d-flex align-items-center">
-                <i class="bi bi-list navbar-toggler mx-2"></i>
-                <!-- Modal Search -->
-                <button type="button" class="btn mx-2" data-bs-target="#searchCar" data-bs-toggle="modal">
-                    <i class="bi bi-search"></i>
-                </button>
+
             </div>
         </div>
     </header>
 
+
+
     <!-- Modal Search Form Field -->
-    <div class="modal fade" id="searchCar" tabindex="-1" aria-labelledby="searchCarLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Research Car</h1>
-                    <button type="button" class="btn-modal-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="" class="d-flex justify-content-center align-items-center">
-                        <div class="input-group">
-                            <select class="form-control m-2">
-                                <option>Make</option>
-                            </select>
-                            <select class="form-control m-2">
-                                <option>Model</option>
-                            </select>
-                            <select class="form-control m-2">
-                                <option>Year</option>
-                            </select>
-                        </div>
-                        <div class="d-flex mt-3 justify-content-center align-items-center">
-                            <button type="button" class="btn btn-primary">Search</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/js/bootstrap.bundle.min.js"></script>
