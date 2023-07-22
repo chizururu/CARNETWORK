@@ -13,4 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+    var header = document.getElementById('header');
+
+    function handleScroll() {
+        if (window.scrollY > 0) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    }
+
+    // Tambahkan event listener ke event scroll
+    window.addEventListener('scroll', handleScroll);
+
 })

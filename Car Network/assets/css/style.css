@@ -46,12 +46,27 @@ small, .text_small {font-size: 0.8rem;}
 #header {
     position: sticky;
     top: 0px;
+    z-index: 999;
 }
 
 #header .navbar-brand > a {
     text-decoration: none;
     color: var(--blue);
 }
+
+/* Tambahkan class baru untuk header ketika di-scroll */
+.header-scrolled {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pastikan header tetap di atas dan z-index-nya tinggi ketika di-scroll */
+.header-scrolled {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 
 @media only screen and (max-width: 425px){
     /*Small smartphones [325px -> 425px]*/
@@ -112,14 +127,14 @@ small, .text_small {font-size: 0.8rem;}
     display: none;
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 540px){
     .mobile-collapse {
         display: block;
     }
     .navbar {
         display: none;
         position: fixed;
-        top: 70px; /* Adjust the top position to your liking */
+        top: 100px; /* Adjust the top position to your liking */
         max-width: 280px;
         left: 50px;
         right: 50px;
@@ -176,6 +191,12 @@ small, .text_small {font-size: 0.8rem;}
     background-color: var(--blue);
 }
 
+@media only screen and (max-width: 540px){
+    .modal-header button {
+        width: auto;
+        height: auto;
+    }
+}
 
 
 /*--------------------------------------------------------------
@@ -186,44 +207,80 @@ small, .text_small {font-size: 0.8rem;}
 #hero {
     overflow: hidden;
     position: relative;
+    background-image: url("../img/herocar.jpg");
+    background-size: cover;
+    background-position: center;
     height: 90vh;
+    z-index: 1;
 }
 
 #hero .container {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #hero .container h1 {
-    color: var(--black);
-    font-family: Poppins;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 2.275px;
+    text-align: center;
+    color: var(--white);
 }
 
-#hero .container .ease {
+#hero .container h1 > .blue {
     color: var(--blue);
-    font-family: Poppins;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 2.275px;
 }
-@media only screen and (max-width: 425px){
-    #hero .row .col-10 {
-        display: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 540px){
+    #hero .container {
+        top: 50%;
+    }
+
+    #hero .container h1 {
+        text-align: left;
     }
 }
 
-
-#hero .container img {
-    width: 440px;
-    height: 600px;
-    border-radius: 50px;
-}
+/*  Tablet  */
