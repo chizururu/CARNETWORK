@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Tambahkan event listener ke event scroll
     window.addEventListener('scroll', handleScroll);
 
-
+    $(document).ready(function() {
+        $('.select-form').select2();
+    });
 
 });
