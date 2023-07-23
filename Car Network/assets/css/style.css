@@ -230,16 +230,52 @@ small, .text_small {font-size: 0.8rem;}
     color: var(--blue);
 }
 
+/*--------------------------------------------------------------
+                        # Select Menu
+--------------------------------------------------------------*/
+
+.sel {
+    color: #000000;
+    width: 250px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    overflow: hidden;
+    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat calc(100% - 10px) 14px;
+
+}
 
 
+/* CSS for custom select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
 
+.selected-option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
 
+.options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
 
+.option {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
 
-
-
-
-
+.option:hover {
+    background-color: #f7f7f7;
+}
 
 
 
