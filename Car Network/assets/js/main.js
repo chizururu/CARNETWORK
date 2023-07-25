@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
         $('select').selectpicker();
     });
 
+    /* Paganation using Carousel */
+
+
 
 
 });
