@@ -5,7 +5,11 @@ html {font-size: 100%;} /*16px*/
     --blue: #3772FF;
     --gray: #FAFAFA;
     --red: #DF2935;
+    --red-light : #D36582;
     --white: #ffffff;
+    --snow-white : #F0F0F0;
+    --orange : #F19953;
+    --timberwolf : #D0CFCF;
 }
 
 body {
@@ -187,8 +191,13 @@ small, .text_small {font-size: 0.8rem;}
     flex-direction: column;
 }
 
-.modal form .btn-primary {
+.modal form .btn-search {
     background-color: var(--blue);
+    color: var(--white);
+}
+
+.modal form .select {
+    width: 100% !important;
 }
 
 @media only screen and (max-width: 540px){
@@ -203,90 +212,119 @@ small, .text_small {font-size: 0.8rem;}
                         # Hero
 --------------------------------------------------------------*/
 
-
-#hero {
-    overflow: hidden;
-    position: relative;
-    background-image: url("../img/herocar.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    z-index: 1;
+.popular-box {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    background-color: var(--snow-white);
 }
 
-#hero .container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#hero .container h1 {
-    text-align: center;
+.popular-box > .text-btn {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin-right: 10px;
     color: var(--white);
+    background-color: var(--blue);
 }
 
-#hero .container h1 > .blue {
+#hero h1 {
+    font-size: 64px;
+    line-height: 100px;
+}
+
+#hero .h1-text {
     color: var(--blue);
 }
 
-/*--------------------------------------------------------------
-                        # Select Menu
---------------------------------------------------------------*/
-
-.select2.select2-container {
-    width: 100% !important;
+#hero .hero-text {
+    padding: 100px;
 }
 
-/* Adjust the height of the select input */
-.select2-container--default .select2-selection--single {
-    height: 38px; /* Set the desired height in pixels */
-    display: flex;
+#hero .img-fluid {
+    border-radius: 0 0 0 100px;
+    object-fit: cover;
+    padding: 0;
+    width: 150% !important;
+    height: 90vh;
+}
+
+#hero .hero-img {
+    padding: 0;
+}
+
+
+#hero .search-box {
     align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 31px 81px rgba(0, 17, 77, 0.2);
+    border-radius: 12px;
+    padding: 15px 0;
+    position: relative;
+    z-index: 5;
+    margin: 40px 0;
 }
 
-/* Center the arrow within the Select2 input */
-
-.select2-container--default .select2-results__option {
-    height: 36px;
+#hero .btn-search {
+    width: 100% !important;
+    background-color: var(--blue);
+    color: var(--white);
 }
-/* CSS for custom select */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 540px){
-    #hero .container {
-        top: 50%;
+
+    #hero .popular-box {
+        font-size: 10px;
     }
 
-    #hero .container h1 {
-        text-align: left;
+    #hero .hero-img {
+        display: none;
     }
+
+    #hero .hero-text {
+        padding: 30px;
+    }
+
+    #hero h1 {
+        font-size: 48px;
+    }
+
+    #hero .search-box {
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #hero .popular-box {
+        font-size: 10px;
+    }
+
+    #hero .hero-img {
+        display: none;
+    }
+
+    #hero .hero-text {
+        padding: 30px;
+    }
+
+    #hero h1 {
+        font-size: 58px;
+    }
+
 }
 
 /*  Tablet  */
+
+/*--------------------------------------------------------------
+                        # Popular Cars
+--------------------------------------------------------------*/
+
+#popular-cars h5 {
+    font-weight: 500;
+}
+

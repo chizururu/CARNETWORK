@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
 
     $(document).ready(function() {
-        $('.select-form').select2();
+        $('select').selectpicker();
     });
+
+
 
 });

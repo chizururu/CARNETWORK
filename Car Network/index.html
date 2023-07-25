@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
 
     <!-- Select2 CSS -->
-    <link rel="stylesheet" href="assets/vendor/css/select2.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/bootstrap-select.min.css">
 
     <!-- Main CSS Files-->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -66,18 +66,18 @@
                 <div class="modal-body">
                     <form method="" class="d-flex justify-content-center align-items-center">
                         <div class="input-group">
-                            <select class="form-control m-2">
+                            <select class="select m-2">
                                 <option>Make</option>
                             </select>
-                            <select class="form-control m-2">
+                            <select class="select m-2">
                                 <option>Model</option>
                             </select>
-                            <select class="form-control m-2">
+                            <select class="select m-2">
                                 <option>Year</option>
                             </select>
                         </div>
                         <div class="d-flex mt-3 justify-content-center align-items-center">
-                            <button type="button" class="btn btn-primary">Search</button>
+                            <button type="button" class="btn btn-search">Find</button>
                         </div>
                     </form>
                 </div>
@@ -85,33 +85,92 @@
         </div>
     </div>
     <!-- Hero -->
-    <section id="hero">
-        <div class="container px-4 py-5">
-            <div class="d-flex row justify-content-center align-items-center mx-auto">
-                <h1 class="display-5 fw-bold">
-                    Find Your Dream
-                    Car with <span class="blue">Ease</span>!
-                </h1>
 
-                <form class="d-flex justify-content-between">
-                    <select class="select-form" aria-label="Select an option">
-                        <option selected>Make</option>
-                        <option value="option1">BMW</option>
-                        <option value="option2">Ferrari</option>
-                        <option value="option3">Lamborghini</option>
-                        <option value="option4">Toyota</option>
-                    </select>
-                </form>
+    <section id="hero">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hero-text col-lg-7 my-auto">
+                    <div class="popular-box">
+                        <span class="text-btn">Popular</span>
+                        BMW M5 CS 2023
+                    </div>
+                    <!-- Title -->
+                    <h1 class="display-5 fw-bold">
+                        Eazy Way To Find Your <span class="h1-text">Dream Car</span>
+                    </h1>
+                    <!-- Select -->
+                    <form>
+                        <div class="search-box row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="selected-box">
+                                    <select class="form-control">
+                                        <option selected>Make </option>
+                                        <option>BMW</option>
+                                        <option>Honda </option>
+                                        <option>Hyundai </option>
+                                        <option>Nissan </option>
+                                        <option>Mercedes Benz </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="selected-box">
+                                    <select class="form-control">
+                                        <option selected>Model </option>
+                                        <option>3-Series</option>
+                                        <option>Carrera</option>
+                                        <option>GT-R</option>
+                                        <option>Cayenne</option>
+                                        <option>M3 Competition</option>
+                                        <option>Macan</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="selected-box">
+                                    <select class="form-control">
+                                        <option selected>Year </option>
+                                        <option>2023</option>
+                                        <option>2022 </option>
+                                        <option>2021 </option>
+                                        <option>2020 </option>
+                                        <option>2019 </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button class="btn btn-search">Find</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="hero-img col-lg-5">
+                    <img class="img-fluid" src="assets/img/pexels-roberto-nickson-3166786.jpg">
+                </div>
             </div>
         </div>
-
     </section>
+
+    <section id="popular-cars">
+        <div class="container-fluid py-5 px-4">
+            <h5 class="text-center">Popular Cars</h5>
+
+            <!-- Card With Carousel-->
+            
+        </div>
+    </section>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/js/bootstrap.bundle.min.js"></script>
     <!-- Select2.js -->
-    <script src="assets/vendor/js/select2.min.js"></script>
+    <script src="assets/vendor/js/bootstrap-select.min.js"></script>
     <!-- Main Javascript -->
     <script src="assets/js/main.js"></script>
 
