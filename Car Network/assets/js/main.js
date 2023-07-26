@@ -31,8 +31,66 @@ document.addEventListener('DOMContentLoaded', function () {
         $('select').selectpicker();
     });
 
-    /* Paganation using Carousel */
 
+    /*===================================
+            Paganation using Carousel
+    * =================================== */
+    /* Hero */
+
+    const slider = document.querySelectorAll('.image-container');
+    let currentSlide = 0;
+    const intervalTime = 8000; // 5000ms = 5 detik
+    const fadeDuration = 3000; // 1000ms = 1 detik
+
+    function showSlide(slideIndex) {
+        // Menyembunyikan semua elemen "image-container" kecuali yang pertama
+        for (let i = 0; i < slider.length; i++) {
+            slider[i].style.display = 'none';
+        }
+
+        // Menampilkan slide yang dipilih dengan efek fade-in
+        fadeIn(slider[slideIndex]);
+    }
+
+    function fadeIn(element) {
+        let opacity = 0;
+        element.style.display = 'block';
+
+        function animate() {
+            opacity += (fadeDuration / 100); // Perubahan opasitas dalam setiap langkah animasi
+            element.style.opacity = Math.min(opacity, 1);
+
+            if (opacity < 1) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        animate();
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= slider.length) {
+            currentSlide = 0; // Kembali ke slide pertama setelah mencapai slide terakhir
+        }
+        showSlide(currentSlide);
+    }
+
+    function autoSlide() {
+        nextSlide();
+    }
+
+// Memulai navigasi otomatis
+    let slideInterval = setInterval(autoSlide, intervalTime);
+
+// Tampilkan slide pertama saat halaman dimuat
+    showSlide(currentSlide);
+
+
+
+
+
+    /*Popular Car*/
     /* Array Devices */
     const devices = {
         phone : 1,

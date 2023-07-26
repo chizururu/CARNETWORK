@@ -263,8 +263,14 @@ small, .text_small {font-size: 0.8rem;}
     position: relative;
 }
 
+/* CSS untuk menyembunyikan semua "image-container" */
 .image-container {
-    position: relative;
+    display: none;
+}
+
+/* CSS untuk menampilkan "image-container" yang pertama */
+.image-container:first-child {
+    display: block;
 }
 
 .car-text {
@@ -274,16 +280,50 @@ small, .text_small {font-size: 0.8rem;}
     padding: 10px;
 }
 
+.car-text-bottom {
+    left: 50px;
+    position: absolute;
+    bottom: 90px;
+    letter-spacing: 15px;
+}
+
+.car-text-bottom a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.car-text-bottom a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 3px;
+    background-color: var(--blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.car-text-bottom a:hover:before {
+    transform: scaleX(1);
+}
+
+
 .car-name {
     margin-bottom: 10px;
     padding: 0;
 }
-.car-prices {
+
+.car-name {
     font-size: 36px;
 }
-.car-prices > span {
-    font-weight: 800;
+
+.car-prices  {
+    font-size: 20px;
 }
+
 .hero-slider img {
     width: 150% !important;
     height: 85vh;
